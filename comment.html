@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav { 
+            height: 70px;
+            border-top: 3px solid rgb(77, 129, 226);
+            border-bottom: 1px solid rgb(250, 249, 249);
+            line-height: 70px;
+            background-color: rgba(86, 137, 233,0.6);
+            font-size: 26px;
+            color: azure;
+        }
+        body {
+            color: black;
+            font-size: 16px;
+            background-image: url(图片/digital\ citizenship.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-attachment: fixed;
+        }
+        .box {
+            width: 1200px;
+            height: 520px;
+            background-color: aliceblue;
+            margin: 0 auto;
+            border-top: 1px solid rgba(54, 53, 53, 0.5);
+            border-bottom: 1px solid rgba(54, 53, 53, 0.5);
+            border-left: 1px solid rgba(54, 53, 53, 0.5);
+            border-right: 1px solid rgba(54, 53, 53, 0.5);
+        }
+        .left {
+            width: 310px;
+            height: 520px;
+            background-color: blueviolet;
+            float: left;
+        }
+        .right {
+            width: 890px;
+            height: 520px;
+            background-color: rgba(255, 255, 255,0.3);
+            float: left;
+        }
+        .bottom {
+            height: 72px;
+            border-top: 2px solid black;
+            background-color: whitesmoke;
+            position: relative;
+            font: bolder 18px 'Microsoft Yahei';
+            margin: 0;
+            padding: 0;
+            line-height: 72px;
+        }
+        .bottom a {
+            height: 72px;
+            display: inline-block;
+            color: #4c4c4c;
+            text-decoration: none;
+            padding: 0 20px;
+
+        }
+        .bottom a:hover {
+            background-color: #f9f9f9;
+            color: #0181cc;
+        }
+        .talk_con{
+            widows: 850px;
+            height:520px;
+            border:1px solid #666;
+            margin:0 auto 0;
+            background:#f9f9f9;
+        }
+        .talk_show{
+            width:830px;
+            height:460px;
+            border:1px solid #666;
+            background:#fff;
+            margin:10px auto 0;
+            overflow:auto;
+        }
+        .talk_input{
+            width:830px;
+            margin:10px auto 0;
+        }
+        .whotalk{
+            width:100px;
+            height:30px;
+            float:left;
+            outline:none;
+        }
+        .talk_word{
+            width:610px;
+            height:26px;
+            padding:0px;
+            float:left;
+            margin-left:10px;
+            outline:none;
+            text-indent:10px;
+        }        
+        .talk_sub{
+            width:90px;
+            height:30px;
+            float:left;
+            margin-left:10px;
+        }
+        .atalk{
+           margin:10px; 
+        }
+        .atalk span{
+            display:inline-block;
+            background:#0181cc;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+        .btalk{
+            margin:10px;
+            text-align:right;
+        }
+        .btalk span{
+            display:inline-block;
+            background:#ef8201;
+            border-radius:10px;
+            color:#fff;
+            padding:5px 10px;
+        }
+        .search {
+            display: inline-block;
+            margin: 5px auto;
+            padding: 5px auto;
+            width: 310px;
+            height: 30px;
+            background-color: rgb(136, 7, 161);
+        }
+        .search input {
+            display: inline-block;
+            background-color: rebeccapurple;
+            width: 240px;
+            height: 24px;
+            line-height: 24px;
+            color: white;
+            margin: 0 30px;
+            padding: 0 10px;
+        }
+        .search span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+        div img {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+    <script type="text/javascript">      
+        // 
+            window.onload = function(){
+                var Words = document.getElementById("words");
+                var Who = document.getElementById("who");
+                var TalkWords = document.getElementById("talkwords");
+                var TalkSub = document.getElementById("talksub");
+                
+    
+                TalkSub.onclick = function(){
+                    //定义空字符串
+                    var str = "";
+                    if(TalkWords.value == ""){
+                         // 消息为空时弹窗
+                        alert("消息不能为空");
+                        return;
+                    }
+                    if(Who.value == 0){
+                        //如果Who.value为0n那么是 A说
+                        str = '<div class="atalk"><span>A :' + TalkWords.value +'</span></div>';
+                    }
+                    else{
+                        str = '<div class="btalk"><span>B :' + TalkWords.value +'</span></div>' ;  
+                    }
+                    Words.innerHTML = Words.innerHTML + str;
+                }
+                
+            }
+    
+    
+        </script>
+</head>
+<body>
+    <div class="nav"><h1>Trust U!</h1></div>
+    <br>
+    <div class="box">
+        <div class="left">
+            <div class="search">
+                    <span><img src="图片/600px-VisualEditor_-_Icon_-_Search-big.svg.png" alt=""></span>
+                    <input type="text" value="search users">
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="talk_con">
+                <div class="talk_show" id="words">
+                    <div class="atalk"><span id="asay">A：Hello</span></div>
+                    <div class="btalk"><span id="bsay">B：Hi</span></div>
+                </div>
+                <div class="talk_input">
+                    <select class="whotalk" id="who">
+                        <option value="0">A：</option>
+                        <option value="1">B：</option>
+                    </select>
+                    <input type="text" class="talk_word" id="talkwords">
+                    <input type="button" value="发送" class="talk_sub" id="talksub">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="bottom">
+        <a href="Trust U!.html">Home</a>
+        <a href="Case.html">Cases</a>
+        <a href="Create file.html">Sign up</a>
+        <a href="Log in.html">Log in</a>
+    </div>
+</body>
+</html>

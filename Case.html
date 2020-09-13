@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cases</title>
+    <STYLe>
+        .nav { 
+            height: 70px;
+            border-top: 3px solid rgb(77, 129, 226);
+            border-bottom: 1px solid rgb(250, 249, 249);
+            line-height: 70px;
+            background-color: rgba(86, 137, 233,0.6);
+            font-size: 26px;
+            color: azure;
+        }
+        *{
+	        margin: 0;
+	        padding: 0;
+	        box-sizing: border-box;
+        }
+        .header {
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+        html,body{
+	        overflow: hidden;
+	        width: 100%;
+	        height: 100%;
+	        background: skyblue;
+        }
+        .page{
+	        width: 100%;
+	        height: 100%;
+	        position: absolute;
+	        left: 0;
+	        top: 0;
+	        background: skyblue;
+	        transform: translateX(375px);
+	        transition: all 1s;
+        }
+        .active{
+            transform: translateX(0px) !important;
+        }
+        .startGame{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .startBtn{
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 30px;
+            border: none;
+            background: green;
+            color: #fff;
+            box-shadow: 0 0 30px green;
+            border-radius: 10px;
+        }
+        .endGame{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.endGame h1{
+	margin: 40px;
+}
+.gaming{
+    width: 100%;
+    height: 100%;
+	background: coral;
+	padding: 40px 20px;
+}
+.gaming h1{
+	margin: 20px 0px;
+	font-size: 24px;
+	color: #fff;
+}
+.gaming .options>div{
+	margin: 10px 10px;
+	padding: 5px 10px;
+	color: #fff;
+	border-radius: 7px;
+}
+    </STYLe>
+</head>
+<body>
+<script>
+    var tikuList = [];
+    var currenTimu = {};
+    var score = 0;
+    var isChoose = false;
+    var num = 10;
+    var t = 180;
+    function time(){
+        document.getElementById("begin").style.display="none";
+        if(t>=0){
+            setTimeout(function(){
+                document.getElementById("clock").innerHTML = t;
+                t--;
+                time();
+            },1000);
+        }
+    }
+    function display() {
+        document.getElementById("one").style.display="block";
+    }
+    function judge1(){
+        var str = document.getElementById("judge1").value;
+        var num = 20;
+        if(str=="")
+            alert("please choose the answer");
+        else if(str!="b")
+            alert("Answer error");
+        else{
+            document.getElementById("one").style.display="none";
+            document.getElementById("two").style.display="block";
+        }
+    }
+    function judge2(){
+        var str = document.getElementById("judge2").value;
+        var num = 20;
+        if(str=="")
+            alert("please choose the answer");
+        else if(str!="c")
+            alert("Answer error");
+        else{
+            document.getElementById("two").style.display="none";
+            document.getElementById("three").style.display="block";
+        }
+    }
+    function judge3(){
+        var str = document.getElementById("judge3").value;
+        var num = 20;
+        if(str=="")
+            alert("please choose the answer");
+        else if(str!="c")
+            alert("Answer error");
+        else{
+            document.getElementById("three").style.display="none";
+            document.getElementById("four").style.display="block";
+        }
+    }
+    function judge4(){
+        var str = document.getElementById("judge4").value;
+        var num = 20;
+        if(str=="")
+            alert("please choose the answer");
+        else if(str!="a")
+            alert("Answer error");
+        else{
+            document.getElementById("four").style.display="none";
+            document.getElementById("five").style.display="block";
+        }
+    }
+    function judge5(){
+        var str = document.getElementById("judge5").value;
+        var num = 20;
+        if(str=="")
+            alert("please choose the answer");
+        else if(str!="b")
+            alert("Answer error");
+        else{
+            alert("Finished! Credit Score=100!");
+            t=-2;
+            document.getElementById("clock").style.display="none";
+        }
+    }
+</script>
+<div class="nav"><h1>Trust U!</h1></div>
+<div class="page active startGame header" id="begin" style="display:block" align="center"><input class="startBtn" type="button" value="Begin" onclick="time();display()"></div>
+<div class="gaming" id="one" style="display:none">
+    <h1>Q: On the Internet, we can freely disclose anyone's personal information.</h1><br/>
+    <h1>Select:</h1>  <br/>
+    <h1>A.True</h1>
+    <h1>B.False</h1><br>
+    Enter:<input id="judge1" value="enter lowercase letters" type="text"/>
+    <br>
+    <input type="button" value="sumbit" onclick="judge1()"/>
+</div>
+<div class="gaming" id="two" style="display:none">
+    <h1>Q: When I took a photo, I accidentally took a picture of someone's face and posted it online.
+        Why is this behavior wrong?</h1><br/>
+    <h1>Select:</h1>  <br/>
+    <h1>A.Without the permission of others</h1>
+    <h1>B.This person is a celebrity online</h1>
+    <h1>C.This kind of behavior is easy to infringe others' right of portrait</h1>
+    <br>
+    Enter:<input id="judge2" value="enter lowercase letters" type="text"/><br>
+    <input type="button" value="sumbit" onclick="judge2()"/>
+</div>
+<div class="gaming" id="three" style="display:none">
+    <h1>Q: Which one is wrong?</h1><br/>
+    <h1>Select:</h1>  <br/>
+    <h1>A.Download the image from the website and set it as a desktop background</h1>
+    <h1>B.Quote the picture, identifying the address and author</h1>
+    <h1>C.Reprinted commercial photos</h1>
+    <h1>D.Hang the painting you bought on the wall</h1>
+    <br>
+    Enter:<input id="judge3" value="enter lowercase letters" type="text"/><br>
+    <input type="button" value="sumbit" onclick="judge3()"/>
+</div>
+<div class="gaming" id="four" style="display:none">
+    <h1>Q: It is illegal to conduct online transactions on websites of unknown origin.</h1><br/>
+    <h1>Select:</h1>  <br/>
+    <h1>A.True</h1>
+    <h1>B.False</h1><br>
+    Enter:<input id="judge4" value="enter lowercase letters" type="text"/><br>
+    <input type="button" value="sumbit" onclick="judge4()"/>
+</div>
+<div class="gaming" id="five" style="display:none">
+    <h1>Q: The dissemination of fake news and fabricated events is prohibited on the Internet because...</h1><br/>
+    <h1>Select:</h1>  <br/>
+    <h1>A.There will be more rumors</h1>
+    <h1>B.It's easy to cause social panic</h1>
+    <h1>C.It's real enough to be convincing</h1>
+    <br>
+    Enter:<input id="judge5" value="enter lowercase letters" type="text"/><br>
+    <input type="button" value="sumbit" onclick="judge5()"/>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .nav { 
+            height: 70px;
+            border-top: 3px solid rgb(77, 129, 226);
+            border-bottom: 1px solid rgb(250, 249, 249);
+            line-height: 70px;
+            background-color: rgba(86, 137, 233,0.6);
+            font-size: 26px;
+            color: azure;
+        }
+        body {
+            color: black;
+            font-size: 16px;
+            background-image: url(图片/digital\ citizenship.jpg);
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-attachment: fixed;
+         }
+         table {
+             width: 700px;
+             height: 40px;
+             background-color: whitesmoke;
+             line-height: 40px;
+             border-top: 2px solid red;
+             border-bottom: 2px solid red;
+             border-left: 2px solid red;
+             border-right: 2px solid red;
+             text-indent: 2em;
+         }
+    </style>
+</head>
+<body>
+    <div class="nav"><h1>Trust U!</h1></div>
+    <br>
+    <br>
+    <br>
+    <br>
+     <form action="" method="POST">
+    <div align="center"><table width="300">
+        <tr></tr>
+        <tr> 
+        <td><label for="text">Name:</label></td> 
+        <td>
+            <input type="text" name="name" id="text" maxlength="16">
+        </td>
+        </tr>
+        <br>
+        <tr>
+        <td><label for="pd">Password:</label></td>
+        <td><input type="password" name="password" minlength="6" maxlength="20" id="pd"></td>
+        </tr>
+    </table></div>
+    </form>
+    <br>
+    <br>
+    <div align="center"><input type="submit" value="Log in"></div>
+    <br>
+    <br>
+    <div align="center">If you have no account,<a href="Create file.html" target="_self">sign up.</a></div>
+</body>
+</html>

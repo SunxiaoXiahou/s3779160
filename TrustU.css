@@ -1,0 +1,126 @@
+.burlywood {
+    width: 1000px;
+    height: 180px;
+    background-color: rgba(235, 185, 119,0.9);
+}
+.black {
+    color: black;
+}
+.font26 {
+    font-size: 26px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.bold {
+    font-weight: bold;
+}
+#white {
+    color: white;
+}
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: white;
+    height: 30px;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    font: italic 700 20px 'Times New Roman' ;
+    text-decoration: none;
+    color: #e2fafa;
+    display: inline;
+    margin: 0 auto;
+}
+.height {
+    line-height: 32px;
+}
+ul a {
+    width: 400px;
+    height: 40px;
+    display: block;
+    background-color: rgba(167, 167, 161,0.7);
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    text-indent: 2em;
+    line-height: 40px;
+}
+ul a:hover {
+    background-color: skyblue;
+}
+.nav {
+    height: 70px;
+    border-top: 3px solid rgb(77, 129, 226);
+    border-bottom: 1px solid rgb(250, 249, 249);
+    line-height: 70px;
+    background-color: rgba(86, 137, 233,0.6);
+    font-size: 26px;
+    color: azure;
+}
+body {
+    background-image: url(图片/digital\ citizenship.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+}
+.header {
+    margin: 0 auto;
+    border-radius: 3px;
+}
+p {
+    height: 10px;
+    border-top: 2px solid white;
+}
+.box {
+    width: 1280px;
+    height: 380px;
+    border-top: 1px solid rgb(221, 214, 214);
+    border-bottom: 1px solid rgb(219, 211, 211);
+    border-left: 1px solid rgb(214, 209, 209);
+    border-right: 1px solid rgb(214, 209, 209);
+    background-color: rgba(102, 93, 93, 0.7);
+    font-size: 20px;
+    color: whitesmoke;
+    padding: 10px 24px;
+}
+ol ul div {
+    display: inline-block;
+    width: 620px;
+    height: 330px;
+    border-top: 1px solid rgb(221, 214, 214);
+    border-bottom: 1px solid rgb(219, 211, 211);
+    border-left: 1px solid rgb(214, 209, 209);
+    border-right: 1px solid rgb(214, 209, 209);
+    background-color: rgba(102, 93, 93, 0.5);
+    font-size: 18px;
+    color: whitesmoke;
+    padding: 10px 24px;
+    margin: 10px auto;
+}
+.box2 {
+    height: 1450px;
+    width: 1520px;
+    display: inline-block;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+ol ul img {
+    width: 100%;
+}
+.box3 {
+    width: 1000px;
+    height: 160px;
+    border-top: 2px solid rgb(221, 214, 214);
+    border-bottom: 2px solid rgb(219, 211, 211);
+    border-left: 2px solid rgb(214, 209, 209);
+    border-right: 2px solid rgb(214, 209, 209);
+    background-color: rgba(102, 93, 93, 0.7);
+    font-size: 22px;
+    color: whitesmoke;
+    padding: 10px 24px;
+}
